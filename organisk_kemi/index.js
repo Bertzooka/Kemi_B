@@ -1,3 +1,4 @@
+
 // Gem reference til nuværende side
 let currentPage = '#page1';
 
@@ -61,3 +62,25 @@ function showPage(newPage){
 
     currentPage = newPage;
 }
+
+
+//for at for få billeder til at vise sig selv når man trykker på et knap 
+//function showImage(imageUrl) {
+           // const container = document.getElementById("imageDisplay");
+           // container.innerHTML = `<img src="${imageUrl}" alt="Loaded Image">`;
+       // }
+
+// Find all buttons with class "toggle-btn"
+const buttons = document.querySelectorAll(".toggle-btn");
+
+buttons.forEach(button => {
+    button.addEventListener("click", () => {
+        const img = button.nextElementSibling; // The image right after the button
+
+        if (img.style.display === "none" || img.style.display === "") {
+            img.style.display = "block";   // Show image
+        } else {
+            img.style.display = "none";    // Hide image
+        }
+    });
+});
