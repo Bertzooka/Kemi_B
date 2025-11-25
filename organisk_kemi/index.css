@@ -84,7 +84,7 @@ body,
     place-items: center;
     /* vises først med klasen "show" */
     position: fixed;
-    left: -100vw;
+    left: 100vw;
     transition: all .6s ease-in-out;
 }
 
@@ -98,68 +98,55 @@ body,
     height: 100%;
     display: grid;
     place-items: center;
-
+    
 }
 
-
 #page1{
-    background-image: url(./assets/Witcher3Forside.jpg);
+    grid-template-rows: 1fr 15fr 1fr;
+    background-image:url(./assets/Forsidebillede.png);
     background-size: cover;
+    color: white;
 }
 
 #page1 .top{
-    font-size: 600;
+    font-weight: 700;
+    font-size: xx-large;
+    background-color: rgba(0,0,0,0.6);
+    padding-top: 1rem;
 }
 
+#page1 .top .box{
+   padding: 1rem 0.5rem ;
+    max-width:30vw;
+    min-height:0;
+    grid-template-rows: 1fr 0.1fr;
+    background-color: rgba(0,0,0,0.6);
+    border-radius: 1rem;
+    padding:2rem;
+    border-color:darkred;
+    border-radius: 10vh;
+}
 
+#page1 .middle{
+    background-color: rgba(0,0,0,0.6);
+    font-size: xx-large;
+    font-style: italic;
+}
+
+#page1 .bottom{
+    background-color: rgba(0,0,0,0.6);
+}
 
 #page2{
-    grid-template-columns: repeat(4,1fr);
+    background-color: #BEC5AD;
+}
+#page3{
+    background-color: #A4B494;
+}
+#page4{
+    background-color: #519872;
 }
 
-#page2 .Geralt:nth-child(1){
-
-}
-
-.tekst1{
-    font-weight: 100;
-    background-color: aliceblue;
-}
-
-.billede1{
-     background-image: url(./assets/Geralt.jpg);
-    background-size: cover;
-}
-#page2 .Ciri:nth-child(2){
-
-}
-.tekst2{
-    font-weight: 100;
-    background-color: aliceblue;
-}
-.billede2{
-    background-image: url(./assets/Ciri.webp);
-    background-size:cover;
-    background-size: cover;
-}
-#page2 .Yennefer:nth-child(3){}
-.tekst3{
-    font-weight: 100;
-    background-color: aliceblue;
-}
-.billede3{
-background-image: url(./assets/Yennefer.jpg);
-background-size: cover;
-}
-#page2 .Vesemir:nth-child(4){}
-.tekst4{
-    font-weight: 100;
-    background-color: aliceblue;
-    background-size: auto;
-}
-.billede4{
-    background-image: url(./assets/Vesemir.webp);
-}
 
 .scroll{
     min-height:100%;    
@@ -174,14 +161,7 @@ background-size: cover;
     background-size: cover;
 }
 
-.box{
-    max-width:30vw;
-    min-height:0;
-    grid-template-rows: 1fr 8fr;
-    background-color: rgba(0,0,0,0.6);
-    border-radius: 1rem;
-    padding:2rem;
-}
+
 
 .box .top{
     background-color: black;
@@ -206,32 +186,20 @@ background-size: cover;
 }
 
 .background1{
-    background-image: url('./assets/Geralt.jpg');
+    background-image: url('./assets/Sprit.png');
+    background-size: cover;
 }
 .background2{
-    background-image: url('./assets/Ciri.webp');
+    background-image: url('./assets/borup.png');
 }
 .background3{
-    background-image: url('./assets/Yennefer.jpg');
+    background-image: url('./assets/neglelakfjerner.png');
+    background-size: cover;
 }
 .background4{
     background-image: url('./assets/Vesemir.webp');
 }
 
-
-#videoButton{
-    position:absolute;
-    bottom:1rem;
-    left:15rem;
-    padding:0.5rem 1rem 0.5rem 1rem;
-    border-radius: 1rem;
-    background-color: rgba(100,100,100,0.9);
-    color: white;
-    border:1px solid lightgray;
-    z-index: 1000;
-    transition: .3s ease-in-out all;
-    cursor:pointer;
-}
 
 #videoButton:hover{
     background-color: white;
@@ -253,14 +221,42 @@ background-size: cover;
 }
 
 #page5{
-    background-color: rgb(183, 222, 249);
-    text-align: center;
-    font-weight: 900;
-    font-style: oblique;
+    grid-template-rows: 1fr 1fr 1fr;    
 }
 
-#page6{
-    background-size: cover;
-    background-position: center;
-    margin: 0;
+#page5 .alkohol{
+    background-color: #CEE5F2;
 }
+
+#page5 .keton{
+    background-color: #ACCBE1;
+}
+#page5 .carboxylsyre{
+    background-color: #7C98B3;
+}
+
+
+
+
+#page6{
+    background-size: contain;
+    background-position: 100%;
+}
+
+#page6 {
+  position: relative;
+}
+
+#theDropdown {
+  position: absolute;
+  top: 550px;   /* ryk ned */
+  left: 1100px;  /* ryk til højre */
+}
+
+
+
+#page7 {
+    background-color: darkblue;
+}
+
+
